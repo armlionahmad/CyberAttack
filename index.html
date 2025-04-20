@@ -357,11 +357,12 @@
 <body>
     <div class="container">
         <h1>هجوم أخلاقي | Little Programmer</h1>
+        <h3>Ahmed Rabie</h3>
         
         <div class="control-panel">
             <div class="form-row">
                 <div class="form-group">
-                    <label for="url">رابط الموقع:</label>
+                    <label for="url">رابط الموقع المستهدف:</label>
                     <input type="url" id="url" placeholder="https://example.com" required>
                 </div>
                 
@@ -380,7 +381,7 @@
             <div class="form-row">
                 <div class="form-group">
                     <label for="concurrent">عدد الهجمات المتزامنة:</label>
-                    <input type="number" id="concurrent" value="100" min="1" max="10000">
+                    <input type="number" id="concurrent" value="1000" min="1" max="10000">
                 </div>
                 
                 <div class="form-group">
@@ -417,7 +418,7 @@
         
         <div class="progress-container">
             <div class="progress-info">
-                <span>تقدم الاختبار</span>
+                <span>تقدم الهجوم</span>
                 <span id="progressText">0%</span>
             </div>
             <div class="progress-bar">
@@ -692,7 +693,7 @@
             if (state.requestCount < 10) return; // لا تحلل مع بيانات قليلة
             
             // افتراض أن الموقع يسقط عند 5 أضعاف معدل الطلبات الحالي
-            const crashThreshold = requestsPerSec * 5;
+            const crashThreshold = requestsPerSec * 50;
             
             // افتراض أن كل جهاز يمكنه إرسال 50 طلب/ثانية (يعتمد على اتصال الإنترنت)
             const requestsPerDevice = 50;
