@@ -693,7 +693,7 @@
             if (state.requestCount < 10) return; // لا تحلل مع بيانات قليلة
             
             // افتراض أن الموقع يسقط عند 5 أضعاف معدل الطلبات الحالي
-            const crashThreshold = requestsPerSec * 50;
+            const crashThreshold = requestsPerSec * 500;
             
             // افتراض أن كل جهاز يمكنه إرسال 50 طلب/ثانية (يعتمد على اتصال الإنترنت)
             const requestsPerDevice = 50;
